@@ -115,6 +115,7 @@
 	},
 	"semanticHighlighting": true,
 	"tokenColors": [
+		// #region Comments and keywords
 		{
 			"name": "Comments all",
 			"scope": [
@@ -275,13 +276,15 @@
 				"keyword.other.unit.vmin",
 				"keyword.other.unit.vw",
 				"keyword.other.unit.volume",
-				"keyword.other.unit.percentage",
-				"keyword.other.unit"
+				"keyword.other.unit.percentage"
 			],
 			"settings": {
 				"foreground": "#139599"
 			}
 		},
+		// #endregion Comments and keywords
+		//
+		// #region constant and storage
 		{
 			"name": "constant - numeric",
 			"scope": [
@@ -360,6 +363,9 @@
 				"foreground": "#9800d4"
 			}
 		},
+		// #endregion constant and storage
+		//
+		// #region strings and literals
 		{
 			"name": "strings",
 			"scope": [
@@ -380,6 +386,22 @@
 			}
 		},
 		{
+			"name": "literals",
+			"scope": [
+				"constant.language",
+				"constant.character",
+				"constant.escape",
+				"constant.other"
+			],
+			"settings": {
+				"foreground": "#0bb1a3",
+				"fontStyle": "bold underline"
+			}
+		},
+		// #endregion strings and literals
+		//
+		// #region entities and support
+		{
 			"name": "named entity",
 			"scope": [
 				"entity.name"
@@ -395,7 +417,7 @@
 				"entity.name.type"
 			],
 			"settings": {
-				"foreground": "#aa385a",
+				"foreground": "#c0bebe",
 				"fontStyle": ""
 			}
 		},
@@ -430,13 +452,26 @@
 				"fontStyle": "bold"
 			}
 		},
+		// #endregion entities and support
+		//
+		// #region html tags and attributes
+		{
+			"name": "HTML Entity",
+			"scope": [
+				"constant.character.entity"
+			],
+			"settings": {
+				"foreground": "#55da81",
+				"fontStyle": "italic underline"
+			}
+		},
 		{
 			"name": "entity name tag - html tag names",
 			"scope": [
-				"entity.name.tag"
+				"entity.name.tag.html"
 			],
 			"settings": {
-				"foreground": "#0064a7"
+				"foreground": "#09738d"
 			}
 		},
 		{
@@ -451,12 +486,15 @@
 		{
 			"name": "entity other attribute-name",
 			"scope": [
-				"entity.other.attribute-name"
+				"entity.other.attribute-name.html"
 			],
 			"settings": {
 				"foreground": "#6d9b83"
 			}
 		},
+		// #endregion html tags and attributes
+		//
+		// #region css selectors and properties
 		{
 			"name": "CSS tag selector",
 			"scope": [
@@ -556,6 +594,19 @@
 				"foreground": "#882a2a"
 			}
 		},
+		// #endregion css selectors and properties
+		//
+		// #region CSharp
+		{
+			"name": "Using keyword",
+			"scope": [
+				"keyword.other.using",
+				"keyword.other.using.cs",
+			],
+			"settings": {
+				"foreground": "#6a7685"
+			}
+		},
 		{
 			"name": "CSharp entity name type class",
 			"scope": [
@@ -606,7 +657,7 @@
 				"entity.name.type.delegate.cs"
 			],
 			"settings": {
-				"foreground": "#d67900",
+				"foreground": "#b96900",
 				"fontStyle": "bold"
 			}
 		},
@@ -633,7 +684,12 @@
 		{
 			"name": "CSharp type properties",
 			"scope": [
-				"entity.name.variable.property.cs"
+				"entity.name.variable.property.cs",
+				"entity.name.variable.object.property.cs",
+				"entity.name.variable.object.property.write.cs",
+				"entity.name.variable.object.property.local.cs",
+				"entity.name.variable.object.property.local.write.cs",
+				"entity.name.variable.object.property.readwrite.cs"
 			],
 			"settings": {
 				"foreground": "#009cb1"
@@ -646,7 +702,7 @@
 				"entity.name.variable.local.cs"
 			],
 			"settings": {
-				"foreground": "#b6b6b3"
+				"foreground": "#a89129"
 			}
 		},
 		{
@@ -656,7 +712,7 @@
 				"entity.name.variable.field.readwrite.cs"
 			],
 			"settings": {
-				"foreground": "#d1d180"
+				"foreground": "#9e9e72"
 			}
 		},
 		{
@@ -667,6 +723,336 @@
 			],
 			"settings": {
 				"foreground": "#97a70b"
+			}
+		},
+		{
+			"name": "CSharp events",
+			"scope": [
+				"entity.name.variable.event.cs"
+			],
+			"settings": {
+				"foreground": "#be6d09"
+			}
+		},
+		{
+			"name": "CSharp explicit interface implementations",
+			"scope": [
+				"entity.name.function.interface.cs"
+			],
+			"settings": {
+				"foreground": "#009cb1"
+			}
+		},
+		{
+			"name": "CSharp methods",
+			"scope": [
+				"entity.name.function.cs",
+				"entity.name.function.method.cs",
+				"entity.name.function.method.static.cs",
+				"entity.name.function.method.unsafe.cs",
+				"entity.name.function.method.unsafe.static.cs"
+			],
+			"settings": {
+				"foreground": "#a71565",
+				"fontStyle": "italic bold"
+			}
+		},
+		{
+			"name": "CSharp extension methods",
+			"scope": [
+				"entity.name.function.extension.cs",
+				"entity.name.function.extension.static.cs",
+				"entity.name.function.extension.unsafe.cs",
+				"entity.name.function.extension.unsafe.static.cs",
+				"entity.name.function.extension.local.cs",
+				"entity.name.function.extension.local.write.cs",
+				"entity.name.function.extension.readwrite.cs",
+				"entity.name.function.extension.write.cs",
+				"entity.name.function.extension.local.readwrite.cs"
+			],
+			"settings": {
+				"foreground": "#4d7e5f",
+				"fontStyle": "italic bold"
+			}
+		},
+		{
+			"name": "CSharp derived class",
+			"scope": [
+				"entity.other.inherited-class.cs",
+				"entity.other.inherited-class.interface.cs",
+				"entity.name.type.inherited-class.cs",
+				"entity.name.type.inherited-class.interface.cs",
+				"entity.name.type.inherited-class.record.cs",
+				"entity.name.type.inherited-class.struct.cs",
+				"entity.name.type.inherited-class.record.interface.cs",
+				"entity.name.type.inherited-class.struct.interface.cs",
+				"entity.name.type.inherited-class.struct.record.cs",
+				"entity.name.type.inherited-class.struct.record.interface.cs"
+			],
+			"settings": {
+				"foreground": "#358585",
+				"fontStyle": "italic bold"
+			}
+		},
+		// #endregion CSharp
+		//
+		// #region Razor Pages and Blazor Components
+		{
+			"name": "Razor Pages and Components Transition",
+			"scope": [
+				"keyword.control.cshtml.transition",
+				"keyword.control.vbhtml.transition",
+				"keyword.control.razor.transition"
+			],
+			"settings": {
+				"foreground": "#a7276d"
+			}
+		},
+		{
+			"scope": [
+				"keyword.control.cshtml.transition.tag.name",
+				"keyword.control.vbhtml.transition.tag.name",
+				"keyword.control.razor.transition.tag.name"
+			],
+			"settings": {
+				"foreground": "#459f4d"
+			}
+		},
+		{
+			"name": "Razor Pages and Components Markup",
+			"scope": [
+				"meta.structure.razor",
+				"keyword.control.razor.singleLineMarkup",
+			],
+			"settings": {
+				"foreground": "#949494"
+			}
+		},
+		{
+			"name": "Razor Pages and Components Code Block",
+			"scope": [
+				"meta.structure.razor.codeblock",
+				"meta.structure.cshtml.codeblock",
+				"meta.structure.vbhtml.codeblock",
+				"meta.structure.aspx.codeblock"
+			],
+			"settings": {
+				"foreground": "#b9b989"
+			}
+		},
+		{
+			"name": "Razor Pages and Components Code Block",
+			"scope": [
+				"keyword.control.razor.directive.codeblock.open",
+				"keyword.control.razor.directive.codeblock.close",
+				"meta.structure.razor.directive.codeblock.open",
+				"meta.structure.razor.directive.codeblock.close",
+				"keyword.control.cshtml.directive.codeblock.open",
+				"keyword.control.cshtml.directive.codeblock.close"
+			],
+			"settings": {
+				"foreground": "#8e4585"
+			}
+		},
+		{
+			"scope": [
+				"constant.character.escape.razor.tagHelperOptOut",
+				"keyword.control.razor.directive.addTagHelper",
+				"keyword.control.razor.directive.removeTagHelper",
+				"keyword.control.razor.directive.tagHelperPrefix"
+			],
+			"settings": {
+				"foreground": "#6f65a0"
+			}
+		},
+		{
+			"scope": [
+				"keyword.control.razor.directive.namespace",
+				"keyword.control.razor.directive.layout",
+				"keyword.control.razor.directive.page",
+				"keyword.control.razor.directive.using",
+				"keyword.control.razor.directive.inject",
+				"keyword.control.razor.directive.section",
+				"keyword.control.razor.directive.model",
+				"keyword.control.razor.directive.implements",
+				"keyword.control.razor.directive.functions"
+			],
+			"settings": {
+				"foreground": "#8921a3",
+				"fontStyle": "bold italic"
+			}
+		},
+		{
+			"name": "Razor Pages and Components Markup",
+			"scope": [
+				"meta.structure.razor",
+				"keyword.control.razor.singleLineMarkup",
+				"keyword.control.cshtml.transition.textTag.open",
+				"keyword.control.cshtml.transition.textTag.close",
+				"keyword.control.razor.transition.textTag.open",
+				"keyword.control.razor.transition.textTag.close"
+			],
+			"settings": {
+				"foreground": "#999999"
+			}
+		},
+		{
+			"name": "Razor Pages and Components Code Block",
+			"scope": [
+				"keyword.control.razor.directive.codeblock.open",
+				"keyword.control.razor.directive.codeblock.close",
+				"meta.structure.razor.directive.codeblock.open",
+				"meta.structure.razor.directive.codeblock.close",
+				"keyword.control.cshtml.directive.codeblock.open",
+				"keyword.control.cshtml.directive.codeblock.close"
+			],
+			"settings": {
+				"foreground": "#7c577a"
+			}
+		},
+		{
+			"name": "Razor Void Tag",
+			"scope": [
+				"meta.expression.explicit.cshtml",
+				"meta.expression.explicit.vbhtml",
+				"meta.expression.explicit.razor"
+			],
+			"settings": {
+				"foreground": "#93a336",
+				"fontStyle": "bold underline"
+			}
+		},
+		{
+			"scope": [
+				"meta.expression.implicit.cshtml",
+				"meta.expression.implicit.vbhtml",
+				"meta.expression.implicit.razor"
+			],
+			"settings": {
+				"foreground": "#8a3f8a"
+			}
+		},
+		{
+			"name": "HTML attribute assignment",
+			"scope": [
+				"punctuation.separator.key-value.html",
+				"punctuation.separator.key-value.cshtml",
+				"punctuation.separator.key-value.razor",
+				"punctuation.separator.key-value.vbhtml"
+			],
+			"settings": {
+				"foreground": "#6d8b8b"
+			}
+		},
+		{
+			"scope": [
+				"keyword.control.razor.directive",
+				"keyword.control.razor.transition",
+				"keyword.control.razor.singleLineMarkup",
+				"keyword.control.razor.directive.attribute",
+				"keyword.control.razor.directive.attribute.name"
+			],
+			"settings": {
+				"foreground": "#c53381"
+			}
+		},
+		{
+			"name": "Razor Directive Attribute Value",
+			"scope": [
+				"keyword.control.razor.directive.attribute.value",
+				"keyword.control.razor.directive.attribute.value.quote",
+				"keyword.control.razor.directive.attribute.value.singleQuote"
+			],
+			"settings": {
+				"foreground": "#d2a8a1"
+			}
+		},
+		{
+			"name": "Razor Directive Tag Helper",
+			"scope": [
+				"keyword.control.razor.directive.addTagHelper",
+				"keyword.control.razor.directive.tagHelperPrefix",
+				"keyword.control.razor.directive.removeTagHelper",
+				"keyword.control.razor.directive.tagHelper"
+			],
+			"settings": {
+				"foreground": "#06a58a",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "Razor Directive Tag Helper Attribute",
+			"scope": [
+				"keyword.control.razor.transition.tag.name",
+			],
+			"settings": {
+				"foreground": "#c53381"
+			}
+		},
+		// #endregion Razor Pages and Blazor Components
+		//
+		// #region Puncuations
+		{
+			"name": "Quote Punctuation Definition String (single or double quoted)",
+			"scope": [
+				"punctuation.definition.string.begin",
+				"punctuation.definition.string.end"
+			],
+			"settings": {
+				"foreground": "#29926c"
+			}
+		},
+		{
+			"name": "Quote Punctuation Definition Attribute (single or double quoted)",
+			"scope": [
+				"punctuation.definition.attribute.begin",
+				"punctuation.definition.attribute.end"
+			],
+			"settings": {
+				"foreground": "#29926c"
+			}
+		},
+		{
+			"name": "Punctuation Definition Tag",
+			"scope": [
+				"punctuation.definition.tag.begin",
+				"punctuation.definition.tag.end"
+			],
+			"settings": {
+				"foreground": "#1d8f97"
+			}
+		},
+		{
+			"name": "Punctuation Definition Entity",
+			"scope": [
+				"punctuation.definition.entity"
+			],
+			"settings": {
+				"foreground": "#d2a8a1"
+			}
+		},
+		{
+			"name": "Punctuation Definition Parameters",
+			"scope": [
+				"punctuation.definition.parameters.begin",
+				"punctuation.definition.parameters.end"
+			],
+			"settings": {
+				"foreground": "#7a6f8a"
+			}
+		},
+		{
+			"name": "Punctuation Definition curly braces",
+			"scope": [
+				"punctuation.definition.curly-braces.begin",
+				"punctuation.definition.curly-braces.end",
+				"punctuation.definition.braces.begin",
+				"punctuation.definition.braces.end",
+				"punctuation.definition.array.begin",
+				"punctuation.definition.array.end"
+			],
+			"settings": {
+				"foreground": "#7a6f8a"
 			}
 		}
 	]
