@@ -1,0 +1,30 @@
+{
+  "name": "ashtheme",
+  "displayName": "AshTheme",
+  "description": "VS Code Dark Theme, for a ASP.Net, razor, blazor, and C#",
+  "icon": "icon.png",
+  "publisher": "AshrafSada",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Ash Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Ash Theme-color-theme.json"
+      }
+    ]
+  },
+  "galleryBanner": {
+    "color": "#000000",
+    "theme": "dark"
+  },
+  "devDependencies": {
+    "vsce": "^1.102.0"
+  }
+}
