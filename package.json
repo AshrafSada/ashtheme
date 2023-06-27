@@ -19,7 +19,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "Ash Theme",
+        "label": "Ash Sharp",
         "uiTheme": "vs-dark",
         "path": "./themes/Ash Theme-color-theme.json"
       }

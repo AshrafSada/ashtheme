@@ -137,17 +137,28 @@
 			}
 		},
 		{
+			"name": "Keyword",
+			"scope": [
+				"keyword"
+			],
+			"settings": {
+				"foreground": "#953e6d",
+				"fontStyle": ""
+			}
+		},
+		{
 			"name": "Keywords - operators - new",
 			"scope": [
-				"keyword",
 				"keyword.operator",
 				"keyword.operator.expression",
 				"keyword.operator.new",
 				"keyword.other.new",
 				"keyword.operator.other",
+				"keyword.operator.arrow",
+				"keyword.operator.arrow.cs"
 			],
 			"settings": {
-				"foreground": "#2b6e86"
+				"foreground": "#277a1f"
 			}
 		},
 		{
@@ -194,7 +205,10 @@
 				"keyword.control.default.cs",
 				"keyword.control.default",
 				"keyword.control.switch.case.cs",
-				"keyword.control.switch.case"
+				"keyword.control.switch.case",
+				"keyword.control.flow.break.cs",
+				"keyword.control.flow.continue.cs",
+				"keyword.control.flow.return.cs"
 			],
 			"settings": {
 				"foreground": "#6b55a0",
@@ -309,11 +323,10 @@
 				"string.quoted.double",
 				"string.quoted.triple",
 				"string.template",
-				"string.unquoted",
-				"string.heredoc"
+				"string.unquoted"
 			],
 			"settings": {
-				"foreground": "#979797",
+				"foreground": "#427c7a",
 				"fontStyle": ""
 			}
 		},
@@ -529,63 +542,38 @@
 		//
 		// #region punctuations
 		{
-			"name": "Quote Punctuation Definition String (single or double quoted)",
+			"name": "Punctuation Definition separation comma",
 			"scope": [
+				"punctuation.curlybrace.close.cs",
+				"punctuation.curlybrace.open.cs",
+				"punctuation.definition.arguments.begin",
+				"punctuation.definition.arguments.end",
+				"punctuation.definition.parameters.begin",
+				"punctuation.definition.parameters.end",
+				"punctuation.definition.tag.begin",
+				"punctuation.definition.tag.end",
+				"punctuation.definition.typeparameters.begin.cs",
+				"punctuation.definition.typeparameters.end.cs",
+				"punctuation.parenthesis.close.cs",
+				"punctuation.parenthesis.open.cs",
+				"punctuation.separator.comma.cs",
+				"punctuation.separator.comma",
 				"punctuation.definition.string.begin",
 				"punctuation.definition.string.end",
 				"punctuation.definition.attribute.begin",
-				"punctuation.definition.attribute.end"
+				"punctuation.definition.attribute.end",
+				"punctuation.squarebracket.open",
+				"punctuation.squarebracket.close",
+				"punctuation.squarebracket.open.cs",
+				"punctuation.squarebracket.close.cs",
+				"punctuation.definition.interpolation.begin.cs",
+				"punctuation.definition.interpolation.end.cs",
+				"punctuation.definition.interpolation.begin",
+				"punctuation.definition.interpolation.end",
+				"punctuation.terminator.statement.cs"
 			],
 			"settings": {
-				"foreground": "#67686e"
-			}
-		},
-		{
-			"name": "Punctuation Definition Tag",
-			"scope": [
-				"punctuation.definition.tag.begin",
-				"punctuation.definition.tag.end"
-			],
-			"settings": {
-				"foreground": "#5f5f57"
-			}
-		},
-		{
-			"name": "Punctuation Definition Entity",
-			"scope": [
-				"punctuation.definition.entity",
-			],
-			"settings": {
-				"foreground": "#f08c0a"
-			}
-		},
-		{
-			"name": "Punctuation Definition Parameters",
-			"scope": [
-				"punctuation.definition.parameters.begin",
-				"punctuation.definition.parameters.end"
-			],
-			"settings": {
-				"foreground": "#7a6f8a"
-			}
-		},
-		{
-			"name": "Punctuation Definition curly braces",
-			"scope": [
-				"punctuation.curlybrace.open.cs",
-				"punctuation.curlybrace.close.cs"
-			],
-			"settings": {
-				"foreground": "#9b9b9b"
-			}
-		},
-		{
-			"scope": [
-				"punctuation.definition.typeparameters.begin.cs",
-				"punctuation.definition.typeparameters.end.cs"
-			],
-			"settings": {
-				"foreground": "#ff0000"
+				"foreground": "#74636d"
 			}
 		},
 		// #endregion Puncuations
@@ -856,7 +844,7 @@
 		},
 		// #endregion CSharp types
 		//
-		// #region CSharp variables
+		// #region CSharp variables, properties, and parameters
 		{
 			"name": "CSharp variables field",
 			"scope": [
@@ -912,13 +900,88 @@
 			}
 		},
 		{
-			"scope": [],
+			"name": "CSharp property getters and setters",
+			"scope": [
+				"keyword.other.get.cs",
+				"keyword.other.set.cs",
+				"keyword.other.init.cs"
+			],
 			"settings": {
-				"foreground": "#ff0000",
+				"foreground": "#898d63",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSharp methods and functions",
+			"scope": [
+				"keyword.other.attribute-specifier.cs",
+				"entity.name.function.cs",
+				"entity.name.function-call.cs",
+				"entity.name.function-call.method.cs",
+				"entity.name.function-call.static.cs",
+				"entity.name.function-call.virtual.cs",
+				"entity.name.function-call.inherited.cs",
+			],
+			"settings": {
+				"foreground": "#8f9461",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSharp local variables",
+			"scope": [
+				"entity.name.variable.local",
+				"entity.name.variable.local.cs",
+			],
+			"settings": {
+				"foreground": "#4f6186",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSharp keyword this, base, typeof, nameof, default, as, is, in",
+			"scope": [
+				"keyword.other.this",
+				"keyword.other.base",
+				"keyword.other.this.cs",
+				"keyword.other.base.cs",
+				"keyword.other.await.cs",
+				"keyword.other.typeof",
+				"keyword.other.nameof",
+				"keyword.other.default",
+				"keyword.other.typeof.cs",
+				"keyword.other.nameof.cs",
+				"keyword.other.default.cs",
+				"keyword.other.as.cs",
+				"keyword.other.is.cs",
+				"keyword.other.in.cs"
+			],
+			"settings": {
+				"foreground": "#8e4d69",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSharp entity name",
+			"scope": [
+				"entity.name"
+			],
+			"settings": {
+				"foreground": "#bf760f",
+				"fontStyle": ""
+			}
+		},
+		{
+			"name": "CSharp name type any entity.name.type.cs",
+			"scope": [
+				"entity.name.type.cs",
+			],
+			"settings": {
+				"foreground": "#0269c4",
 				"fontStyle": ""
 			}
 		}
-		// #endregion CSharp variables
+		// #endregion CSharp variables, properties, and parameters
 		//
 	],
 	"semanticHighlighting": true,
