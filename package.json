@@ -1,9 +1,14 @@
 {
-  "name": "ashtheme",
-  "displayName": "AshTheme",
-  "description": "VS Code Dark Theme, for a ASP.Net, razor, blazor, and C#",
+  "name": "ashsharp",
+  "displayName": "Ash Sharp",
+  "description": "Dark Theme for better syntax colorization for C# ASP.Net, razor, blazor",
   "icon": "icon.png",
   "publisher": "AshrafSada",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshrafSada/ashtheme"
+  },
+  "license": "Apache-2.0",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.79.0"
@@ -23,8 +28,5 @@
   "galleryBanner": {
     "color": "#000000",
     "theme": "dark"
-  },
-  "devDependencies": {
-    "vsce": "^1.102.0"
   }
 }
