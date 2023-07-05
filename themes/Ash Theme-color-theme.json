@@ -27,7 +27,7 @@
       "checkbox.background": "#0c1216",
       "checkbox.border": "#0c1216",
       "checkbox.foreground": "#d6d6d6",
-      "editor.background": "#060606",
+      "editor.background": "#0c0c0c",
       "editor.findMatchBackground": "#074a6e",
       "editor.findMatchBorder": "#0d74db",
       "editor.findMatchHighlightBackground": "#474c4e",
@@ -47,7 +47,7 @@
       "editorBracketMatch.border": "#1e3f5f",
       "editorCursor.background": "#000000",
       "editorCursor.foreground": "#e29118",
-      "editorGutter.background": "#060606",
+      "editorGutter.background": "#0c0c0c",
       "editorIndentGuide.activeBackground": "#737373",
       "editorIndentGuide.background": "#4d4d4d",
       "editorLineNumber.activeForeground": "#428d86",
@@ -129,18 +129,26 @@
       {
          "name": "Comments and documentation",
          "scope": [
-            "comment",
-            "comment.block",
-            "comment.block.documentation",
-            "comment.line",
-            "comment.line.double-slash.cs",
             "comment.block.documentation.cs",
+            "comment.block.documentation.jsdoc entity.name.type.instance.jsdoc",
+            "comment.block.documentation.jsdoc keyword.other.documentation.jsdoc",
+            "comment.block.documentation.jsdoc punctuation.definition.comment.jsdoc",
+            "comment.block.documentation.jsdoc variable.other.jsdoc",
+            "comment.block.documentation.jsdoc",
+            "comment.block.documentation",
+            "comment.block.razor",
+            "comment.block",
+            "comment.line.double-slash.cs",
+            "comment.line",
+            "comment",
+            "keyword.control.razor.comment.star",
+            "keyword.control.razor.comment",
             "punctuation.definition.comment.cs",
-            "punctuation.definition.tag.cs",
-            "punctuation.definition.tag.begin.cs",
-            "punctuation.definition.tag.end.cs",
-            "punctuation.whitespace.comment.leading.cs",
             "punctuation.definition.comment.leading.cs",
+            "punctuation.definition.tag.begin.cs",
+            "punctuation.definition.tag.cs",
+            "punctuation.definition.tag.end.cs",
+            "punctuation.whitespace.comment.leading.cs"
          ],
          "settings": {
             "foreground": "#5d5d5d",
@@ -726,9 +734,13 @@
          "scope": [
             "keyword.other.using",
             "keyword.other.using.cs",
+            "keyword.other.import",
+            "keyword.other.using.cshtml",
+            "keyword.other.using.razor"
          ],
          "settings": {
-            "foreground": "#727c88"
+            "foreground": "#5f6c72",
+            "fontStyle": "bold"
          }
       },
       {
@@ -754,7 +766,7 @@
             "storage.type.struct.cs",
          ],
          "settings": {
-            "foreground": "#689466"
+            "foreground": "#9e5d76"
          }
       },
       {
@@ -854,13 +866,10 @@
             "entity.name.variable.property.cs"
          ],
          "settings": {
-            "foreground": "#4dab69",
+            "foreground": "#b18a0b",
             "fontStyle": ""
          }
       },
-      // #endregion CSharp types
-      //
-      // #region CSharp variables, properties, and parameters
       {
          "name": "CSharp variables field",
          "scope": [
@@ -911,7 +920,7 @@
             "variable.other.object.property.cs"
          ],
          "settings": {
-            "foreground": "#375448",
+            "foreground": "#477558",
             "fontStyle": ""
          }
       },
@@ -940,8 +949,8 @@
             "entity.name.function-call.extension-method.cs"
          ],
          "settings": {
-            "foreground": "#74705a",
-            "fontStyle": "italic bold"
+            "foreground": "#837559",
+            "fontStyle": "bold"
          }
       },
       {
@@ -1062,7 +1071,128 @@
             "foreground": "#7e4f6a",
             "fontStyle": ""
          }
-      }
+      },
+      // #endregion JSON Syntax
+      //
+      // #region Razor
+      {
+         "name": "Razor transition escape character",
+         "scope": [
+            "constant.character.escape.razor.transition",
+            "constant.character.escape.razor.transition"
+         ],
+         "settings": {
+            "foreground": "#8d6c46",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "Razor code keyword, codeblock, page, functions",
+         "scope": [
+            "meta.structure.razor.codeblock",
+            "keyword.control.razor.directive.code",
+            "meta.structure.razor.directive.codeblock",
+            "keyword.control.razor.directive.page",
+            "keyword.control.razor.directive.codeblock.open",
+            "keyword.control.razor.directive.codeblock.close",
+            "keyword.control.razor.directive.functions",
+            "keyword.control.razor.directive.functions.open",
+            "keyword.control.razor.directive.functions.close",
+            "keyword.control.cshtml.transition",
+            "keyword.control.razor.transition",
+            "keyword.control.razor.directive",
+            "keyword.control.razor.directive.open",
+            "keyword.control.razor.directive.close",
+            "keyword.control.razor.directive.razor",
+            "keyword.control.razor.directive.razor.open",
+            "keyword.control.razor.directive.razor.close",
+            "keyword.control.razor.directive.razorblock",
+            "keyword.control.razor.directive.razorblock.open",
+            "keyword.control.razor.directive.razorblock.close"
+         ],
+         "settings": {
+            "foreground": "#a33f3f",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor tag helper",
+         "scope": [
+            "keyword.control.razor.directive.addTagHelper",
+            "keyword.control.razor.directive.removeTagHelper",
+            "keyword.control.razor.directive.tagHelperPrefix"
+         ],
+         "settings": {
+            "foreground": "#3b8d3b",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor model keyword",
+         "scope": [
+            "keyword.control.razor.directive.model"
+         ],
+         "settings": {
+            "foreground": "#007599",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor inherits keyword",
+         "scope": [
+            "keyword.control.razor.directive.inherits"
+         ],
+         "settings": {
+            "foreground": "#765f85",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor inject keyword",
+         "scope": [
+            "keyword.control.razor.directive.inject"
+         ],
+         "settings": {
+            "foreground": "#85427b",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor implements keyword",
+         "scope": [
+            "keyword.control.razor.directive.implements"
+         ],
+         "settings": {
+            "foreground": "#92937d",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor layout keyword",
+         "scope": "keyword.control.razor.directive.layout",
+         "settings": {
+            "foreground": "#5d4aab",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor namespace keyword",
+         "scope": "keyword.control.razor.directive.namespace",
+         "settings": {
+            "foreground": "#246d4e",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "name": "Razor directives",
+         "scope": [
+            "meta.statement.lock.razor",
+         ],
+         "settings": {
+            "foreground": "#ff0000",
+            "fontStyle": "bold"
+         }
+      },
    ],
    "semanticHighlighting": true
 }
