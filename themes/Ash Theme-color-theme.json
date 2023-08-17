@@ -34,7 +34,7 @@
       "editor.findMatchHighlightBorder": "#145596",
       "editor.findRangeHighlightBackground": "#264F78",
       "editor.findRangeHighlightBorder": "#0d74db",
-      "editor.foreground": "#a9a9a9",
+      "editor.foreground": "#198335",
       "editor.hoverHighlightBackground": "#121212",
       "editor.lineHighlightBackground": "#000000",
       "editor.lineHighlightBorder": "#171718",
@@ -45,8 +45,8 @@
       "editor.wordHighlightStrongBorder": "#1e3f5f",
       "editorBracketMatch.background": "#2b3c50",
       "editorBracketMatch.border": "#1e3f5f",
-      "editorCursor.background": "#000000",
-      "editorCursor.foreground": "#e29118",
+      "editorCursor.background": "#ffffff",
+      "editorCursor.foreground": "#ba850a",
       "editorGutter.background": "#0c0c0c",
       "editorIndentGuide.activeBackground": "#737373",
       "editorIndentGuide.background": "#4d4d4d",
@@ -246,9 +246,13 @@
       },
       {
          "name": "Keyword namespace",
-         "scope": "keyword.other.namespace",
+         "scope": [
+            "keyword.other.namespace",
+            "keyword.other.namespace.cs",
+         ],
          "settings": {
-            "foreground": "#899782"
+            "foreground": "#899782",
+            "fontStyle": "italic bold"
          }
       },
       {
@@ -341,7 +345,6 @@
             "string.quoted.single",
             "string.quoted.double",
             "string.quoted.triple",
-            "string.template",
             "string.unquoted",
             "string.interpolated.cs",
             "string.regexp.cs",
@@ -350,8 +353,38 @@
             "string.quoted.double.cs"
          ],
          "settings": {
-            "foreground": "#a4a4a4",
+            "foreground": "#7a634f",
             "fontStyle": ""
+         }
+      },
+      {
+         "name": "string template punctuation",
+         "scope": [
+            "string.template punctuation.definition"
+         ],
+         "settings": {
+            "foreground": "#a73516",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "String template text",
+         "scope": [
+            "string.template",
+         ],
+         "settings": {
+            "foreground": "#046162",
+            "fontStyle": "italic"
+         }
+      },
+      {
+         "name": "string template for interpolation",
+         "scope": [
+            "string.template meta.embedded"
+         ],
+         "settings": {
+            "foreground": "#9d840a",
+            "fontStyle": "bold underline"
          }
       },
       {
@@ -439,7 +472,8 @@
             "entity.name.tag.html"
          ],
          "settings": {
-            "foreground": "#09738d"
+            "foreground": "#853b63",
+            "fontStyle": ""
          }
       },
       {
@@ -457,7 +491,16 @@
             "entity.other.attribute-name.html"
          ],
          "settings": {
-            "foreground": "#6d9b83"
+            "foreground": "#376a74"
+         }
+      },
+      {
+         "name": "html attribute assignment",
+         "scope": [
+            "punctuation.separator.key-value.html"
+         ],
+         "settings": {
+            "foreground": "#685661"
          }
       },
       // #endregion html tags and attributes
@@ -469,7 +512,7 @@
             "entity.name.tag.css"
          ],
          "settings": {
-            "foreground": "#518641"
+            "foreground": "#359917"
          }
       },
       {
@@ -597,7 +640,7 @@
             "punctuation.terminator.statement.cs"
          ],
          "settings": {
-            "foreground": "#74636d"
+            "foreground": "#8c8087"
          }
       },
       // #endregion Puncuations
@@ -740,33 +783,50 @@
          ],
          "settings": {
             "foreground": "#5f6c72",
-            "fontStyle": "bold"
+            "fontStyle": "italic bold"
          }
       },
       {
-         "name": "Chartp keyword storage types declaration",
+         "name": "CSharp keyword types declaration",
          "scope": [
             "keyword.other.action.cs",
+            "keyword.other.annotation.cs",
             "keyword.other.class.cs",
             "keyword.other.delegate.cs",
             "keyword.other.enum.cs",
             "keyword.other.event.cs",
+            "keyword.other.function.cs",
             "keyword.other.interface.cs",
             "keyword.other.module.cs",
             "keyword.other.record.cs",
             "keyword.other.struct.cs",
-            "storage.type.action.cs",
+            "keyword.other.variable.cs",
+            "keyword.other.variant.cs"
+         ],
+         "settings": {
+            "foreground": "#9e5d76"
+         }
+      },
+      {
+         "name": "CSharp storage types declaration",
+         "scope": [
+            "storage.type.annotation.cs",
             "storage.type.class.cs",
+            "storage.type.cs",
             "storage.type.delegate.cs",
             "storage.type.enum.cs",
             "storage.type.event.cs",
+            "storage.type.function.cs",
             "storage.type.interface.cs",
             "storage.type.module.cs",
             "storage.type.record.cs",
             "storage.type.struct.cs",
+            "storage.type.struct.cs",
+            "storage.type.variable.cs",
+            "storage.type.variant.cs"
          ],
          "settings": {
-            "foreground": "#9e5d76"
+            "foreground": "#51776d"
          }
       },
       {
@@ -781,13 +841,25 @@
          }
       },
       {
+         "name": "CSharp entity name struct",
+         "scope": [
+            "entity.name.struct.cs",
+            "entity.name.type.struct.cs"
+         ],
+         "settings": {
+            "foreground": "#408980",
+            "fontStyle": ""
+         }
+      },
+      {
          "name": "CSharp record type",
          "scope": [
             "entity.name.record.cs",
+            "storage.type.record.cs",
             "entity.name.type.record.cs"
          ],
          "settings": {
-            "foreground": "#a88146",
+            "foreground": "#4d947a",
             "fontStyle": ""
          }
       },
@@ -805,7 +877,8 @@
       {
          "name": "CSharp entity name enum",
          "scope": [
-            "entity.name.type.enum.cs"
+            "entity.name.type.enum.cs",
+            "entity.name.enum.cs"
          ],
          "settings": {
             "foreground": "#867aad",
@@ -816,7 +889,8 @@
          "name": "CSharp enum member",
          "scope": [
             "entity.name.variable.enummember.cs",
-            "entity.name.variable.enum-member.cs"
+            "entity.name.variable.enum-member.cs",
+            "entity.name.variable.enum-member"
          ],
          "settings": {
             "foreground": "#7d9159",
@@ -912,15 +986,36 @@
          }
       },
       {
+         "name": "CSharp properties assignment names",
          "scope": [
-            "keyword.other.var.cs",
-            "entity.name.variable.tuple-element.cs",
-            "variable.other.readwrite.cs",
-            "variable.other.assignment.cs",
+            "entity.name.variable.property.assignment.cs",
             "variable.other.object.property.cs"
          ],
          "settings": {
-            "foreground": "#477558",
+            "foreground": "#4c8360",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "CSharp keyword var",
+         "scope": [
+            "keyword.other.var.cs",
+            "keyword.other.alias.cs",
+         ],
+         "settings": {
+            "foreground": "#965d49",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "CSharp variable assignment names",
+         "scope": [
+            "entity.name.variable.tuple-element.cs",
+            "variable.other.readwrite.cs",
+            "variable.other.assignment.cs",
+         ],
+         "settings": {
+            "foreground": "#70805a",
             "fontStyle": ""
          }
       },
@@ -965,11 +1060,20 @@
          }
       },
       {
+         "name": "CSharp Keyword this",
+         "scope": [
+            "keyword.other.this.cs",
+            "keyword.other.this"
+         ],
+         "settings": {
+            "foreground": "#1c699c",
+            "fontStyle": ""
+         }
+      },
+      {
          "name": "CSharp keyword this, base, typeof, nameof, default, as, is, in",
          "scope": [
-            "keyword.other.this",
             "keyword.other.base",
-            "keyword.other.this.cs",
             "keyword.other.base.cs",
             "keyword.other.await.cs",
             "keyword.other.typeof",
@@ -994,17 +1098,17 @@
          ],
          "settings": {
             "foreground": "#bf760f",
-            "fontStyle": ""
+            "fontStyle": "bold"
          }
       },
       {
-         "name": "CSharp name type any entity.name.type.cs",
+         "name": "CSharp any type name",
          "scope": [
-            "entity.name.type.cs",
+            "entity.name.type.cs"
          ],
          "settings": {
-            "foreground": "#405980",
-            "fontStyle": ""
+            "foreground": "#3a6580",
+            "fontStyle": "bold"
          }
       },
       // #endregion CSharp variables, properties, and parameters
