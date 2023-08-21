@@ -3,20 +3,20 @@
    "type": "dark",
    "description": "This Dark Theme is designed for C# and .NET developers.",
    "colors": {
-      "activityBar.activeBackground": "#0c1216",
-      "activityBar.activeBorder": "#0d74db",
-      "activityBar.background": "#0c1216",
-      "activityBar.border": "#091620",
-      "activityBar.foreground": "#d6d6d6",
-      "activityBar.inactiveForeground": "#9b9b9b",
-      "activityBarBadge.background": "#0d6a9c",
-      "activityBarBadge.foreground": "#ececec",
-      "badge.background": "#0d6a9c",
-      "badge.foreground": "#ececec",
+      "activityBar.activeBackground": "#19242c",
+      "activityBar.activeBorder": "#2973e2",
+      "activityBar.background": "#021522",
+      "activityBar.border": "#494a4b",
+      "activityBar.foreground": "#d0d3d4",
+      "activityBar.inactiveForeground": "#afb0b1",
+      "activityBarBadge.background": "#ca0b2b",
+      "activityBarBadge.foreground": "#ffffff",
+      "badge.background": "#ca0b2b",
+      "badge.foreground": "#ffffff",
       "breadcrumb.activeSelectionForeground": "#d6d6d6",
-      "breadcrumb.background": "#0c1216",
+      "breadcrumb.background": "#1b1d1f",
       "breadcrumb.focusForeground": "#d6d6d6",
-      "breadcrumb.foreground": "#9b9b9b",
+      "breadcrumb.foreground": "#d1d3d4",
       "breadcrumbPicker.background": "#0c1216",
       "button.background": "#003D3D",
       "button.foreground": "#fdfdfd",
@@ -25,8 +25,8 @@
       "button.secondaryForeground": "#fdfdfd",
       "button.secondaryHoverBackground": "#249494",
       "checkbox.background": "#0c1216",
-      "checkbox.border": "#0c1216",
-      "checkbox.foreground": "#d6d6d6",
+      "checkbox.border": "#5b6f7c",
+      "checkbox.foreground": "#dae4e9",
       "editor.background": "#0c0c0c",
       "editor.findMatchBackground": "#074a6e",
       "editor.findMatchBorder": "#0d74db",
@@ -45,11 +45,11 @@
       "editor.wordHighlightStrongBorder": "#1e3f5f",
       "editorBracketMatch.background": "#2b3c50",
       "editorBracketMatch.border": "#1e3f5f",
-      "editorCursor.background": "#ffffff",
-      "editorCursor.foreground": "#ba850a",
+      "editorCursor.background": "#0c0c0c",
+      "editorCursor.foreground": "#d6bb21",
       "editorGutter.background": "#0c0c0c",
-      "editorIndentGuide.activeBackground": "#737373",
-      "editorIndentGuide.background": "#4d4d4d",
+      "editorIndentGuide.activeBackground1": "#737373",
+      "editorIndentGuide.background1": "#4d4d4d",
       "editorLineNumber.activeForeground": "#428d86",
       "editorLineNumber.foreground": "#5f5f5f",
       "editorLink.activeForeground": "#0c57ac",
@@ -111,7 +111,9 @@
       "statusBar.border": "#091620",
       "statusBar.foreground": "#d6d6d6",
       "statusBar.noFolderBackground": "#091620",
-      "terminalCursor.foreground": "#e49323",
+      "terminalCursor.foreground": "#d6bb21",
+      "terminal.background": "#111616",
+      "terminal.tab.activeBorder": "#2973e2",
       "testing.iconErrored": "#db1010",
       "testing.iconFailed": "#db1010",
       "testing.iconPassed": "#19c230",
@@ -145,6 +147,7 @@
             "keyword.control.razor.comment",
             "punctuation.definition.comment.cs",
             "punctuation.definition.comment.leading.cs",
+            "punctuation.definition.comment.js",
             "punctuation.definition.tag.begin.cs",
             "punctuation.definition.tag.cs",
             "punctuation.definition.tag.end.cs",
@@ -353,7 +356,7 @@
             "string.quoted.double.cs"
          ],
          "settings": {
-            "foreground": "#7a634f",
+            "foreground": "#b9b9b9",
             "fontStyle": ""
          }
       },
@@ -363,7 +366,7 @@
             "string.template punctuation.definition"
          ],
          "settings": {
-            "foreground": "#a73516",
+            "foreground": "#ff0000",
             "fontStyle": ""
          }
       },
@@ -1297,6 +1300,40 @@
             "fontStyle": "bold"
          }
       },
+      //   #endregion Razor
+      // #region JavaScript
+      {
+         "name": "JavaScript punctuation definition",
+         "scope": [
+            "punctuation.definition.string.begin",
+            "punctuation.definition.string.end"
+         ],
+         "settings": {
+            "foreground": "#68476b",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "JavaScript string quoted",
+         "scope": [
+            "string.quoted.single.js",
+            "string.quoted.double.js"
+         ],
+         "settings": {
+            "foreground": "#b8b2bd",
+            "fontStyle": ""
+         }
+      },
+      {
+         "scope":[
+            "entity.other.attribute-name.js"
+         ],
+         "settings":{
+            "foreground": "#6b8882",
+            "fontStyle": ""
+         }
+      }
+      // #endregion JavaScript
    ],
    "semanticHighlighting": true
 }
