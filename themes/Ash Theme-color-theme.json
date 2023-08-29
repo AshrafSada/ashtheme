@@ -154,7 +154,7 @@
             "punctuation.whitespace.comment.leading.cs"
          ],
          "settings": {
-            "foreground": "#5d5d5d",
+            "foreground": "#616362",
             "fontStyle": ""
          }
       },
@@ -169,18 +169,26 @@
          }
       },
       {
-         "name": "Keywords - operators - new",
-         "scope": [
-            "keyword.operator",
-            "keyword.operator.expression",
-            "keyword.operator.new",
-            "keyword.other.new",
+         "scope":[
             "keyword.operator.other",
             "keyword.operator.arrow",
-            "keyword.operator.arrow.cs"
+            "keyword.operator.arrow.cs",
+            "keyword.operator",
+            "keyword.operator.expression",
          ],
          "settings": {
-            "foreground": "#277a1f"
+            "foreground": "#0a6f81",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "Keywords - operators - new",
+         "scope": [
+            "keyword.operator.new",
+            "keyword.other.new",
+         ],
+         "settings": {
+            "foreground": "#a03b73"
          }
       },
       {
@@ -366,7 +374,7 @@
             "string.template punctuation.definition"
          ],
          "settings": {
-            "foreground": "#ff0000",
+            "foreground": "#c15ece",
             "fontStyle": ""
          }
       },
@@ -1309,7 +1317,7 @@
             "punctuation.definition.string.end"
          ],
          "settings": {
-            "foreground": "#68476b",
+            "foreground": "#a591a1",
             "fontStyle": ""
          }
       },
@@ -1320,16 +1328,116 @@
             "string.quoted.double.js"
          ],
          "settings": {
-            "foreground": "#b8b2bd",
+            "foreground": "#9e9d8a",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "JavaScript attribute name directive",
+         "scope":[
+            "entity.other.attribute-name.directive.js"
+         ],
+         "settings":{
+            "foreground": "#8b75c0",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "JavaScript entity name tag directive",
+         "scope":[
+            "entity.name.tag.directive.js"
+         ],
+         "settings":{
+            "foreground": "#4a77bb",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "JavaScript entity name tag directive",
+         "scope":[
+            "meta.embedded.line.js",
+         ],
+         "settings":{
+            "foreground": "#b88f09",
+            "fontStyle": "underline"
+         }
+      },
+      {
+         "scope":[
+            "keyword.operator.assignment.js"
+         ],
+         "settings":{
+            "foreground": "#6e8b3f",
             "fontStyle": ""
          }
       },
       {
          "scope":[
-            "entity.other.attribute-name.js"
+            "string.template.js",
+            "entity.name.function.tagged-template.js"
          ],
          "settings":{
-            "foreground": "#6b8882",
+            "foreground": "#5d6d83",
+            "fontStyle": ""
+         }
+      },
+      {
+         "scope":[
+            "meta.var-single-variable.expr.js",
+            "meta.definition.variable.js",
+            "variable.other.readwrite.js"
+         ],
+         "settings":{
+            "foreground": "#ac940d",
+            "fontStyle": "italic"
+         }
+      },
+      {
+         "scope":[
+            "entity.name.function.js"
+         ],
+         "settings":{
+            "foreground": "#9a9ba5",
+            "fontStyle": ""
+         }
+      },
+      {
+         "scope":[
+            "variable.other.constant.js"
+         ],
+         "settings":{
+            "foreground": "#1c8396",
+            "fontStyle": ""
+         }
+      },
+      {
+         "scope":[
+            "keyword.control.export.js",
+            "storage.modifier.js"
+         ],
+         "settings":{
+            "foreground": "#994192",
+            "fontStyle": "bold"
+         }
+      },
+      {
+         "scope":[
+            "storage.type.js"
+         ],
+         "settings":{
+            "foreground": "#ad3a0c",
+            "fontStyle": ""
+         }
+      },
+      {
+         "name": "JavaScript keyword rest",
+         "scope":[
+            "variable.object.property.js",
+            "keyword.operator.rest.js",
+            "punctuation.definition.binding-pattern.object.js"
+         ],
+         "settings":{
+            "foreground": "#fff",
             "fontStyle": ""
          }
       }
