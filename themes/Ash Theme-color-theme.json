@@ -276,12 +276,12 @@
         //
         // #region constant and storage
         {
-            "name": "constant - numeric",
+            "name": "constant - numeric all",
             "scope": [
                 "constant.numeric"
             ],
             "settings": {
-                "foreground": "#ca6349"
+                "foreground": "#af606a"
             }
         },
         {
@@ -370,10 +370,11 @@
         {
             "name": "string template punctuation",
             "scope": [
-                "string.template punctuation.definition"
+                "string.template punctuation.definition",
+                "punctuation.support.type.property-name"
             ],
             "settings": {
-                "foreground": "#c15ece",
+                "foreground": "#59a7b4",
                 "fontStyle": ""
             }
         },
@@ -659,10 +660,12 @@
                 "punctuation.definition.interpolation.end.cs",
                 "punctuation.definition.interpolation.begin",
                 "punctuation.definition.interpolation.end",
-                "punctuation.terminator.statement.cs"
+                "punctuation.terminator.statement.cs",
+                "punctuation.support.type.property-name"
             ],
             "settings": {
-                "foreground": "#8c8087"
+                "foreground": "#616362",
+                "fontStyle": ""
             }
         },
         // #endregion Puncuations
@@ -1162,24 +1165,13 @@
         //
         // #region JSON Syntax
         {
-            "name": "JSON punctuation definition begin",
-            "scope": [
-                "punctuation.definition.string.begin",
-                "punctuation.definition.string.end"
-            ],
-            "settings": {
-                "foreground": "#68476b",
-                "fontStyle": ""
-            }
-        },
-        {
             "name": "JSON property name",
             "scope": [
                 "support.type.property-name.json"
             ],
             "settings": {
-                "foreground": "#7e796b",
-                "fontStyle": "bold"
+                "foreground": "#267e6b",
+                "fontStyle": ""
             }
         },
         {
@@ -1189,17 +1181,7 @@
                 "string.quoted.single.json"
             ],
             "settings": {
-                "foreground": "#778a92",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "JSON number",
-            "scope": [
-                "constant.numeric.json"
-            ],
-            "settings": {
-                "foreground": "#be6954",
+                "foreground": "#cdcecf",
                 "fontStyle": ""
             }
         },
@@ -1380,134 +1362,120 @@
         //
         // #region JavaScript
         {
-            "name": "JavaScript punctuation definition",
-            "scope": [
-                "punctuation.definition.string.begin",
-                "punctuation.definition.string.end"
-            ],
-            "settings": {
-                "foreground": "#a591a1",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "JavaScript string quoted",
-            "scope": [
-                "string.quoted.single.js",
-                "string.quoted.double.js"
-            ],
-            "settings": {
-                "foreground": "#9e9d8a",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "JavaScript attribute name directive",
-            "scope": [
-                "entity.other.attribute-name.directive.js"
-            ],
-            "settings": {
-                "foreground": "#8b75c0",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "JavaScript entity name tag directive",
-            "scope": [
-                "entity.name.tag.directive.js"
-            ],
-            "settings": {
-                "foreground": "#4a77bb",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "JavaScript entity name tag directive",
-            "scope": [
-                "meta.embedded.line.js"
-            ],
-            "settings": {
-                "foreground": "#b88f09",
-                "fontStyle": "underline"
-            }
-        },
-        {
-            "scope": [
-                "keyword.operator.assignment.js"
-            ],
-            "settings": {
-                "foreground": "#6e8b3f",
-                "fontStyle": ""
-            }
-        },
-        {
             "scope": [
                 "string.template.js",
-                "entity.name.function.tagged-template.js"
+                "string.template.js.jsx"
             ],
             "settings": {
-                "foreground": "#5d6d83",
+                "foreground": "#9ca0a0",
                 "fontStyle": ""
             }
         },
         {
             "scope": [
-                "meta.var-single-variable.expr.js",
-                "meta.definition.variable.js",
-                "variable.other.readwrite.js"
+                "keyword.operator.assignment.js",
+                "keyword.operator.assignment.js.jsx",
             ],
             "settings": {
-                "foreground": "#ac940d",
-                "fontStyle": "italic"
-            }
-        },
-        {
-            "scope": [
-                "entity.name.function.js"
-            ],
-            "settings": {
-                "foreground": "#9a9ba5",
+                "foreground": "#924779",
                 "fontStyle": ""
             }
         },
         {
             "scope": [
-                "variable.other.constant.js"
+                "entity.name.tag.js",
+                "entity.name.tag.js.jsx"
             ],
             "settings": {
-                "foreground": "#1c8396",
+                "foreground": "#0a7b85",
                 "fontStyle": ""
             }
         },
         {
             "scope": [
-                "keyword.control.export.js",
-                "storage.modifier.js"
+                "variable.other.object.js",
+                "variable.other.object.js.jsx"
             ],
             "settings": {
-                "foreground": "#994192",
+                "foreground": "#729611",
+                "fontStyle": ""
+            }
+        },
+        {
+            "scope": [
+                "variable.other.readwrite.js",
+                "variable.other.readwrite.js.jsx",
+            ],
+            "settings": {
+                "foreground": "#bb8f00",
+                "fontStyle": ""
+            }
+        },
+        {
+            "scope": [
+                "variable.other.readwrite.alias.js"
+            ],
+            "settings": {
+                "foreground": "#40866c",
+                "fontStyle": ""
+            }
+        },
+        {
+            "scope": [
+                "storage.type.js",
+                "storage.type.js.jsx",
+            ],
+            "settings": {
+                "foreground": "#00799e",
+                "fontStyle": ""
+            }
+        },
+        {
+            "scope": [
+                "entity.name.function.js",
+                "entity.name.function.js.jsx"
+            ],
+            "settings": {
+                "foreground": "#09a17b",
+                "fontStyle": ""
+            }
+        },
+        {
+            "scope": [
+                "variable.other.property.js.jsx"
+            ],
+            "settings": {
+                "foreground": "#a7a10b",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "JS JSX attribute name",
+            "scope": [
+                "entity.other.attribute-name.js",
+                "entity.other.attribute-name.js.jsx"
+            ],
+            "settings": {
+                "foreground": "#718c82",
+                "fontStyle": ""
+            }
+        },
+        {
+            "scope": [
+                "meta.object-literal.key.js"
+            ],
+            "settings": {
+                "foreground": "#55886c",
                 "fontStyle": "bold"
             }
         },
         {
             "scope": [
-                "storage.type.js"
+                "storage.type.class.jsdoc"
             ],
             "settings": {
-                "foreground": "#ad3a0c",
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "JavaScript keyword rest",
-            "scope": [
-                "variable.object.property.js",
-                "keyword.operator.rest.js",
-                "punctuation.definition.binding-pattern.object.js"
-            ],
-            "settings": {
-                "foreground": "#fff",
-                "fontStyle": ""
+                "foreground": "#55886c",
+                "fontStyle": "bold"
             }
         },
         // #endregion JavaScript

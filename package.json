@@ -1,32 +1,32 @@
 {
-  "name": "ashsharp",
-  "displayName": "Ash Sharp",
-  "description": "Dark Theme for better syntax colorization for C# ASP.Net, razor, blazor",
-  "icon": "icon.png",
-  "publisher": "AshrafSada",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/AshrafSada/ashtheme"
-  },
-  "license": "Apache-2.0",
-  "version": "0.1.4",
-  "engines": {
-    "vscode": "^1.79.0"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Ash Sharp",
-        "uiTheme": "vs-dark",
-        "path": "./themes/Ash Theme-color-theme.json"
-      }
-    ]
-  },
-  "galleryBanner": {
-    "color": "#000000",
-    "theme": "dark"
-  }
+    "name": "ashsharp",
+    "displayName": "Ash Sharp",
+    "description": "Dark Theme for better syntax colorization for C# ASP.Net, razor, blazor",
+    "icon": "icon.png",
+    "publisher": "AshrafSada",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AshrafSada/ashtheme"
+    },
+    "license": "Apache-2.0",
+    "version": "0.1.5",
+    "engines": {
+        "vscode": "^1.85.1"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Ash Sharp",
+                "uiTheme": "vs-dark",
+                "path": "./themes/Ash Theme-color-theme.json"
+            }
+        ]
+    },
+    "galleryBanner": {
+        "color": "#000000",
+        "theme": "dark"
+    }
 }

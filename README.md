@@ -7,6 +7,7 @@
 ## Theme Preview
 
 ![Theme Preview](https://res.cloudinary.com/ashrafsadacloudinary/image/upload/v1693337655/efbgrveyrhikw8p8jpsy.png)
+
 ## Installation
 
 1. Open **Extensions** sidebar panel in VS Code. `View → Extensions`
